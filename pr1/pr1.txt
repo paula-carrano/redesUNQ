@@ -1,6 +1,6 @@
                                                             ## PROBLEMA 1  ##
 
-Dos factores de red ejercen influencia en el rendimiento de un sistema cliente-servidor: ancho de banda y latencia. Como así también Jitter y disponibilidad. 
+Dos factores de red ejercen influencia en el rendimiento de un sistema cliente-servidor: ancho de banda y latencia.
 Ejemplos de redes con ambos altos y bajos.
 * Ancho de banda alto => 256 kbps
   latencia alta => 200ms 
@@ -12,34 +12,94 @@ Red satelital geoestacionaria. Permite transmitir grandes volumenes de datos, pe
 
                                                         -------------------------
                                                             ## PROBLEMA 2  ##
+Además de ancho de banda y latencia, ¿qué otros parámetros son necesarios para dar un buen ejemplo de la calidad de servicio 
+para voz digital en tiempo real?
+
+Jitter (variación en el retardo): diferencias en los tiempos de llegada afectan la inteligibilidad.
+
+Pérdida de paquetes: la voz puede tolerar un poco de pérdida (1-2%), pero más degrada la calidad.
+
+Disponibilidad / confiabilidad: importante para evitar cortes.
 
                                                         -------------------------
                                                             ## PROBLEMA 3  ##
 
+red satelital = 40.000km, vel de propagación 2/3 * c.
+
+Distancia ida        = 40.000 km
+Distancia ida/vuelta = 80.000 km
+Velocidad            = (2/3) * 300.000 km/s = 200.000 km/s
+Retardo ida          = 40.000 / 200.000 = 0,2 s
+Retardo ida/vuelta   = 0,4 s (400 ms)
+
+El retardo es de 0,4 segundos
                                                         -------------------------
                                                             ## PROBLEMA 4  ##
+
+1. Modularidad: cada capa cumple una función independiente y se puede modificar sin afectar al resto
+2. Interoperabilidad: permite que diferentes softwares y equipos de distintos fabricantes trabajen juntos siguiendo los mismos estandares.
 
                                                         -------------------------
                                                             ## PROBLEMA 5  ##
 
+Sí, cada nivel de la organización cumple el rol de una capa de comunicación. Cada una interactua solo con su par en la otra compañia y no directamente con las demás.
+* Ingenieros = capa técnica -> capa de red/transporte.
+* Departamento de legales = capa de representación  -> acuerdos.
+* Presidentes = capa de aplicación -> financiera.
 
                                                         -------------------------
                                                             ## PROBLEMA 6  ##
 
+Sí, cada oficina ofrece un servicio a la superios y se comunica con su par. La comunicación es "par a par" en cada nivel y encapsulada hacia abajo, en la recepción se desencapsula en orden inverso.
+
+* Cancilleres (capa de aplicación) : definen  el contenido y el significado del mensaje. 
+    Servicio: comunicación de alto nivel entre cancilleres.
+    Protocolo: formato/etiqueta de notas, reglas diplomáticas.
+* Oficina de Traducciones (capa de presentación): convierte al idioma común , asegura la sintaxis/codificación compatible.
+    Servicio: traducción/transformación.
+    Protocolo: -
+* Oficina criptografíca (capa de seguridad): cifra/descifra para confidencialidad e integridad.
+    Servicio: confidencialidad, integridad, autenticidad.
+    Protocolo: -
+* parte de comunicaciones (capa de transporte): asegura entrega extremo a extremo.
+    Servicio: comunicación fiable entre aplicaciones pares.
+* comunicaciones (capa de red/enlace/fisica): transporta el mensaje por el medio.
+    Servicio: direccionamiento/ruteo, detección de errores y tramas, transmisión de bits.
 
                                                         -------------------------
                                                             ## PROBLEMA 7  ##
 
+* orientado a conexión (CONS)    => requiere establecer conexión antes de enviar datos, mantiene estado, ofrece control de flujo, orden y fiabilidad.(TCP)
+* orientado a no conexión (CLNS) => se envían datagramas independientes sin establecimiento previo, no garantiza orden ni entrega.(UPD)
 
                                                         -------------------------
                                                             ## PROBLEMA 8  ##
 
+La negociación en protocolos de red consiste en el proceso mediante el cual dos entidades que implementan el mismo 
+modelo de referencia (ej. OSI o TCP/IP) acuerdan cómo se llevará a cabo la comunicación, estableciendo parámetros compatibles en cada capa.
+
+Mientras más baja sea la capa en la que se negocia, la comunicación tiende a ser más clara, estandarizada y transparente (por ejemplo, en la
+capa de enlace se negocia velocidad y modo dúplex en Ethernet). 
+En cambio, en las capas superiores la negociación suele ser más compleja, pues intervienen aspectos semánticos y de interpretación de datos 
+(idioma, formato de aplicación, algoritmos de compresión o cifrado, etc.).
+Ejemplo el del filósofo
+
                                                         -------------------------
                                                             ## PROBLEMA 9  ##
 
+En un modelo de protocolos en capas (ejemplo: OSI), cada capa k se comunica con la capa inmediatamente inferior, es decir la capa (k−1).
+
+Siempre que (k−1) ≠ 1, existe un servicio implícito de interfaz que permite la interacción entre capas adyacentes. Dicho servicio define
+ cómo la capa superior accede a las funciones de la inferior, a través de primitivas de servicio bien definidas (por ejemplo: request, 
+ indication, response, confirm).
+
+Es imposible que (k−1)=0, ya que en el modelo OSI la capa mínima es la capa 1 (física).Esta capa constituye la base del modelo, pues se encarga de la transmisión de bits a través del medio físico.
+                                                        
                                                         -------------------------
                                                             ## PROBLEMA 10 ##
-
+Las tramas encapsulan paquetes.
+En el envío, la capa de red produce un paquete (p. ej., IP) que la capa de enlace coloca como payload dentro de una trama (con su encabezado/CRC); en el receptor, la trama se desencapsula para 
+recuperar el paquete y pasarlo a la capa de red
                                                         -------------------------                                                            
                                                             ## PROBLEMA 11 ##
 
