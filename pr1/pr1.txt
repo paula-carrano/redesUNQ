@@ -1,0 +1,47 @@
+                                                            ## PROBLEMA 1  ##
+
+Dos factores de red ejercen influencia en el rendimiento de un sistema cliente-servidor: ancho de banda y latencia. Como así también Jitter y disponibilidad. 
+Ejemplos de redes con ambos altos y bajos.
+* Ancho de banda alto => 256 kbps
+  latencia alta => 200ms 
+Red satelital geoestacionaria. Permite transmitir grandes volumenes de datos, pero la señal viaja 36.00km, generando retardos de 250-600ms.
+
+*Ancho de banda bajo <= 256 kbps
+ latencia baja <= 200 ms
+ red telefonica tradicional. Poco ancho de banda (56 kbps) y la latencia es baja porque es conexión terrestre local.
+
+                                                        -------------------------
+                                                            ## PROBLEMA 2  ##
+
+                                                        -------------------------
+                                                            ## PROBLEMA 3  ##
+
+                                                        -------------------------
+                                                            ## PROBLEMA 4  ##
+
+                                                        -------------------------
+                                                            ## PROBLEMA 5  ##
+
+
+                                                        -------------------------
+                                                            ## PROBLEMA 6  ##
+
+
+                                                        -------------------------
+                                                            ## PROBLEMA 7  ##
+
+
+                                                        -------------------------
+                                                            ## PROBLEMA 8  ##
+
+                                                        -------------------------
+                                                            ## PROBLEMA 9  ##
+
+                                                        -------------------------
+                                                            ## PROBLEMA 10 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 11 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 12 ##
