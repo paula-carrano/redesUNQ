@@ -3,12 +3,12 @@
 Dos factores de red ejercen influencia en el rendimiento de un sistema cliente-servidor: ancho de banda y latencia.
 Ejemplos de redes con ambos altos y bajos.
 * Ancho de banda alto => 256 kbps
-  latencia alta => 200ms 
+latencia alta => 200ms 
 Red satelital geoestacionaria. Permite transmitir grandes volumenes de datos, pero la señal viaja 36.00km, generando retardos de 250-600ms.
 
 *Ancho de banda bajo <= 256 kbps
- latencia baja <= 200 ms
- red telefonica tradicional. Poco ancho de banda (56 kbps) y la latencia es baja porque es conexión terrestre local.
+latencia baja <= 200 ms
+red telefonica tradicional. Poco ancho de banda (56 kbps) y la latencia es baja porque es conexión terrestre local.
 
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 2  ##
@@ -90,8 +90,8 @@ Ejemplo el del filósofo
 En un modelo de protocolos en capas (ejemplo: OSI), cada capa k se comunica con la capa inmediatamente inferior, es decir la capa (k−1).
 
 Siempre que (k−1) ≠ 1, existe un servicio implícito de interfaz que permite la interacción entre capas adyacentes. Dicho servicio define
- cómo la capa superior accede a las funciones de la inferior, a través de primitivas de servicio bien definidas (por ejemplo: request, 
- indication, response, confirm).
+cómo la capa superior accede a las funciones de la inferior, a través de primitivas de servicio bien definidas (por ejemplo: request, 
+indication, response, confirm).
 
 Es imposible que (k−1)=0, ya que en el modelo OSI la capa mínima es la capa 1 (física).Esta capa constituye la base del modelo, pues se encarga de la transmisión de bits a través del medio físico.
                                                         
@@ -110,7 +110,7 @@ recuperar el paquete y pasarlo a la capa de red
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 12 ##
  
- Cada capa agrega h bytes de encabezado.
+Cada capa agrega h bytes de encabezado.
 
 * Total de datos enviados = M+n⋅h
 * Overhead = n⋅h
@@ -136,8 +136,8 @@ Ejemplo: si M = 1000, n = 5, h = 20 → 100 bytes de overhead sobre 1100 totales
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 14 ##
     
-    ** TCP: orientado  a conexión, confiable, garantiza entrega en orden, control de flujo y congestión.
-    ** UDP: no orientado a conexión, envío de  datagramas sin garantía de entrega ni orden, sin control de flujo ni congestión, más rápido y liviano.
+** TCP: orientado  a conexión, confiable, garantiza entrega en orden, control de flujo y congestión.
+** UDP: no orientado a conexión, envío de  datagramas sin garantía de entrega ni orden, sin control de flujo ni congestión, más rápido y liviano.
 
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 15 ##
@@ -189,39 +189,155 @@ DESVENTAJAS INALÁMBRICO
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 20 ##
 
-    ESTÁNDARES INTERNACIONALES PARA PROTOCOLOS DE RED
-        ** VENTAJAS
-            1. Interoperabilidad: dispositivos y softwares de diferentes fabricantes funcionan juntos, facilitando el despliegue y adopción global
-            2. Economías  de escala y competencia: estandarizar permite la fabricación en masa e impulsa la innovación en implementaciones compatibles.
+ESTÁNDARES INTERNACIONALES PARA PROTOCOLOS DE RED
+    ** VENTAJAS
+        1. Interoperabilidad: dispositivos y softwares de diferentes fabricantes funcionan juntos, facilitando el despliegue y adopción global
+        2. Economías  de escala y competencia: estandarizar permite la fabricación en masa e impulsa la innovación en implementaciones compatibles.
+    ** DESVENTAJAS
+        1. Rigidez/latencia para evolucionar: el proceso de estandarización es lento, las nuevas ideas tardan en incorporarse lo que frena la innovación rápida.
+        2. Riesgo de estandarizar soluciones subóptimas: si un estandar es utilizado masivamente pero no es tecnicamente ideal, se convierte en una solución mediocre como dominante.
 
-        ** DESVENTAJAS
-            1. Rigidez/latencia para evolucionar: el proceso de estandarización es lento, las nuevas ideas tardan en incorporarse lo que frena la innovación rápida.
-            2. Riesgo de estandarizar soluciones subóptimas: si un estandar es utilizado masivamente pero no es tecnicamente ideal, se convierte en una solución mediocre como dominante.
-
-                                                                    -------------------------                                                            
+                                                                 -------------------------                                                            
                                                                         ## PROBLEMA 21 ##
+ESTÁNDARES INTERNACIONALES
+    * Transporte aéreo
+    * Telecomunicaciones
+    * Medidas y pesos
 
+ESTÁNDARES NO ESTABLECIDOS
+    * Etiquetas en productos agropecuarios
+    * Eventos artísticos
+    * Pequeño comercio local (rotiseria)
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 22 ##
+
+* Correo elesctrónico y mensajeria: incomunicación por parte de los usuarios.
+* Acceso a materiales de plataformas de alamacenamiento: no poder acceder a documentación para trabajar ó estudiar.
+* Banca online y pagos: no podes pagar servicios u operar con tu cuenta bancaria.
+* Entretenimiento: no hay acceso a los contenidos de entretenimiento.
+
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 23 ##
-
+REDES DE LA FACU
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 24 ##
+HACER                                                                        
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 25 ##
+Proyecto elegido: QUIC (y su uso en HTTP/3) — (resumen conceptual, útil para la práctica).
 
+Problema que resuelve: QUIC nace para mejorar el rendimiento de protocolos de transporte tradicionales (TCP+TLS) en la web, reduciendo latencias del establecimiento de conexión y mejorando la multiplexación sin head-of-line blocking.
+
+Resumen:
+
+QUIC implementa un transporte sobre UDP que incorpora confiabilidad, control de congestión, recuperación rápida, y seguridad integrada (TLS 1.3) en la capa de transporte.
+
+Permite handshakes más rápidos (0-RTT en algunos casos), multiplexación por flujos sin bloqueo mutuo y actualizaciones más rápidas a los algoritmos de congestion control.
+
+
+HTTP/3 usa QUIC como capa de transporte para mejorar tiempos de carga de páginas y resiliencia en redes móviles.
+
+Impacto / beneficios: menor latencia perceptible por el usuario, mejor experiencia web en conexiones inestables o móviles, mayor resistencia a reordenamientos.
+                                                                    
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 26 ##
+HACER
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 27 ##
-
+HACER
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 28 ##
-                                                                    -------------------------                                                            
-                                                                        ## PROBLEMA 29 ##
+
+Los RFC (Requests for Comments) son documentos técnicos y de especificación que describen protocolos, procedimientos, formatos y conceptos usados en Internet.
+
+Muchos RFCs han sido formalizados como estándares (STD / Internet Standards), otros son propuestas, experimentos o documentación histórica.
+
+Publicación y mantenimiento: originalmente por IETF/ISI; hoy la IETF y el RFC Editor gestionan la serie. Cada RFC tiene un número único (por ejemplo, RFC 791 = IPv4).
+
+Los RFCs pueden ser informativos, experimentales, o estándar; constituyen la fuente primaria para definiciones de protocolos Internet.
 
                                                                     -------------------------                                                            
+                                                                        ## PROBLEMA 29 ##
+** LAN (Local Area Network)
+
+Ámbito: edificio, campus pequeño.
+
+Tecnologías: Ethernet (cobre/fibra), Wi-Fi para acceso.
+
+Velocidades: típicamente 100 Mbps — 100 Gbps y más en backbones.
+
+Latencia: baja.
+
+Ejemplo: red de una oficina o aula universitaria.
+
+
+** MAN (Metropolitan Area Network)
+
+Ámbito: ciudad o área metropolitana.
+
+Tecnologías: fibra metropolitana, Ethernet sobre fibra, MPLS.
+
+Velocidades: desde cientos de Mbps hasta varios Gbps.
+
+Propósito: interconectar LANs dentro de una ciudad (por ej., campus universitario con sedes).
+
+Ejemplo: red municipal o red corporativa regional.
+
+
+** WAN (Wide Area Network)
+
+Ámbito: áreas geográficas amplias (países, continentes).
+
+Tecnologías: enlaces dedicados, fibra submarina, MPLS, satélite, túneles VPN.
+
+Velocidades: muy variables; pueden ser desde Mbps hasta Tbps en backbones.
+
+Latencia: mayor (depende de distancia física y número de saltos).
+
+Ejemplo: Internet global, red corporativa internacional interconectando sucursales.
+                                                                    -------------------------                                                            
                                                                         ## PROBLEMA 30 ##
+
+a) Enfermera pronuncia en voz alta el nombre de un paciente que no conoce.
+
+    Broadcast (local, a todos en sala) — Medio físico: broadcast acústico (aire), medio broadcast.
+
+b) Tres pacientes de la sala de espera se ponen a charlar entre ellos.
+
+    Unicast (conversaciones punto a punto entre pares) o multicast informal (grupo reducido) — Medio físico: comunicación inalámbrica acústica punto a punto / local.
+
+c) Fábrica envía folleto por correo postal a todos los vecinos del barrio.
+
+    Broadcast (difusión a todos los vecinos) — Medio físico: postal (transporte físico, broadcast espacial).
+
+d) Dos personas hablan por teléfono.
+
+    Punto a punto (unicast) — Medio físico: enlace telefónico punto a punto (conmutado / circuito o VoIP sobre red paquete).
+
+e) Tres personas hablan por teléfono en conferencia.
+
+    Multicast (comunicación multipunto entre participantes concretos) — Medio físico: enlace multipunto (puede ser conmutación de circuito en PBX o mezcla en servidor MCU en VoIP).
+
+f) Dos amigas hablan entre ellas mientras viajan en el colectivo.
+
+    Unicast (conversación privada) o local multicast si están con otras personas escuchando — Medio físico: acústico local (aire) / entorno broadcast físico.
+
                                                                     -------------------------                                                            
                                                                         ## PROBLEMA 31 ##
+
+*------------------------------------------------------------------------------*--------------------------------------------------------------------------------*---------------------------------------------------------------*------------------------------------------------------------------------------------------------------------*
+| Ejemplo (situación)                                                          | simplex / half-duplex / full-duplex                                            |	unicast / multicast / broadcast                             |	orientado a conexión / sin conexión|                                                                     |
+*------------------------------------------------------------------------------*--------------------------------------------------------------------------------*---------------------------------------------------------------*------------------------------------------------------------------------------------------------------------*
+| 1. Una llamada telefónica entre dos personas                                 | Full-duplex                                                                    |	Unicast                                                     |	Orientado a conexión (si es circuito tradicional o sesión establecida en VoIP)                           |
+| 2. Un debate entre dos candidatos presidenciales pautado por tiempos         | Half-duplex (alternancia en turnos de palabra)                                 |	Broadcast (audiencia)                                       |	Sin conexión en sentido de emisión; la organización de turnos es de control, no una sesión punto-a-punto |
+| 3. Un auditorio viendo una película en el cine                               | Simplex (flujo unidireccional: pantalla → audiencia)                           |	Broadcast                                                   |	Sin conexión (difusión unidireccional, no hay establecimiento de sesión por receptor)                    |
+| 4. Una llamada telefónica utilizando el servicio de “conferencia entre tres” | Full-duplex (habitualmente)                                                    |	Multicast (grupo específico)                                |	Orientado a conexión (sesión entre participantes gestionada)                                             |
+| 5. El envío de un SMS a un amigo                                             | Simplex (mensaje enviado → receptor lo recibe; no hay canal simultáneo de voz) |	Unicast                                                     |	Sin conexión (mensaje store-and-forward; no requiere sesión persistente)                                 |
+| 6. Enviar un email a la lista de alumnos de redes                            | Simplex                                                                        |	Multicast (lista, o broadcast según cobertura)              |	Sin conexión (SMTP store-and-forward; no es una sesión interactiva)                                      |
+| 7. Un conductor de radio taxi recibe un viaje, lo toma y lo confirma.        | Full-duplex (voz con despacho) o simplex para señalización según sistema       |	Unicast (mensaje entre conductor y dispatch)                |	Orientado a conexión si existe sesión persistente / seguimiento; si sólo es notificación, sin conexión   |
+| 8. El flujo de petróleo por un oleoducto                                     | Simplex (flujo unidireccional físico)                                          |	Unicast (no aplica exactamente; es un flujo físico dirigido)|	Sin conexión (modelo físico continuo; no hay establecimiento de sesión de comunicación)                  |
+*------------------------------------------------------------------------------*--------------------------------------------------------------------------------*---------------------------------------------------------------*------------------------------------------------------------------------------------------------------------*
+ 
+
+
+dolce: antesquenadie
