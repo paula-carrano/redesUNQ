@@ -10,8 +10,8 @@ Red satelital geoestacionaria. Permite transmitir grandes volumenes de datos, pe
  latencia baja <= 200 ms
  red telefonica tradicional. Poco ancho de banda (56 kbps) y la latencia es baja porque es conexión terrestre local.
 
-                                                        -------------------------
-                                                            ## PROBLEMA 2  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 2  ##
 Además de ancho de banda y latencia, ¿qué otros parámetros son necesarios para dar un buen ejemplo de la calidad de servicio 
 para voz digital en tiempo real?
 
@@ -21,8 +21,8 @@ Pérdida de paquetes: la voz puede tolerar un poco de pérdida (1-2%), pero más
 
 Disponibilidad / confiabilidad: importante para evitar cortes.
 
-                                                        -------------------------
-                                                            ## PROBLEMA 3  ##
+                                                                    -------------------------                                                                                                                    -------------------------
+                                                                        ## PROBLEMA 3  ##
 
 red satelital = 40.000km, vel de propagación 2/3 * c.
 
@@ -33,22 +33,22 @@ Retardo ida          = 40.000 / 200.000 = 0,2 s
 Retardo ida/vuelta   = 0,4 s (400 ms)
 
 El retardo es de 0,4 segundos
-                                                        -------------------------
-                                                            ## PROBLEMA 4  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 4  ##
 
 1. Modularidad: cada capa cumple una función independiente y se puede modificar sin afectar al resto
 2. Interoperabilidad: permite que diferentes softwares y equipos de distintos fabricantes trabajen juntos siguiendo los mismos estandares.
 
-                                                        -------------------------
-                                                            ## PROBLEMA 5  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 5  ##
 
 Sí, cada nivel de la organización cumple el rol de una capa de comunicación. Cada una interactua solo con su par en la otra compañia y no directamente con las demás.
 * Ingenieros = capa técnica -> capa de red/transporte.
 * Departamento de legales = capa de representación  -> acuerdos.
 * Presidentes = capa de aplicación -> financiera.
 
-                                                        -------------------------
-                                                            ## PROBLEMA 6  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 6  ##
 
 Sí, cada oficina ofrece un servicio a la superios y se comunica con su par. La comunicación es "par a par" en cada nivel y encapsulada hacia abajo, en la recepción se desencapsula en orden inverso.
 
@@ -66,14 +66,14 @@ Sí, cada oficina ofrece un servicio a la superios y se comunica con su par. La 
 * comunicaciones (capa de red/enlace/fisica): transporta el mensaje por el medio.
     Servicio: direccionamiento/ruteo, detección de errores y tramas, transmisión de bits.
 
-                                                        -------------------------
-                                                            ## PROBLEMA 7  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 7  ##
 
 * orientado a conexión (CONS)    => requiere establecer conexión antes de enviar datos, mantiene estado, ofrece control de flujo, orden y fiabilidad.(TCP)
 * orientado a no conexión (CLNS) => se envían datagramas independientes sin establecimiento previo, no garantiza orden ni entrega.(UPD)
 
-                                                        -------------------------
-                                                            ## PROBLEMA 8  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 8  ##
 
 La negociación en protocolos de red consiste en el proceso mediante el cual dos entidades que implementan el mismo 
 modelo de referencia (ej. OSI o TCP/IP) acuerdan cómo se llevará a cabo la comunicación, estableciendo parámetros compatibles en cada capa.
@@ -84,8 +84,8 @@ En cambio, en las capas superiores la negociación suele ser más compleja, pues
 (idioma, formato de aplicación, algoritmos de compresión o cifrado, etc.).
 Ejemplo el del filósofo
 
-                                                        -------------------------
-                                                            ## PROBLEMA 9  ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 9  ##
 
 En un modelo de protocolos en capas (ejemplo: OSI), cada capa k se comunica con la capa inmediatamente inferior, es decir la capa (k−1).
 
@@ -95,19 +95,20 @@ Siempre que (k−1) ≠ 1, existe un servicio implícito de interfaz que permite
 
 Es imposible que (k−1)=0, ya que en el modelo OSI la capa mínima es la capa 1 (física).Esta capa constituye la base del modelo, pues se encarga de la transmisión de bits a través del medio físico.
                                                         
-                                                        -------------------------
-                                                            ## PROBLEMA 10 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 10 ##
 Las tramas encapsulan paquetes.
 En el envío, la capa de red produce un paquete (p. ej., IP) que la capa de enlace coloca como payload dentro de una trama (con su encabezado/CRC); en el receptor, la trama se desencapsula para 
 recuperar el paquete y pasarlo a la capa de red
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 11 ##
+            
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 11 ##
 
 (a) Dividir en tramas el flujo de bits transmitidos → Capa de Enlace de Datos (2).
 (b) Determinar la ruta que se utilizará a través de la subred → Capa de Red (3).
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 12 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 12 ##
  
  Cada capa agrega h bytes de encabezado.
 
@@ -122,8 +123,8 @@ M + n . h	​
 
 Ejemplo: si M = 1000, n = 5, h = 20 → 100 bytes de overhead sobre 1100 totales = 9,09%
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 13 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 13 ##
 ** Similitudes:
     1. Ambos son modelos de referencia en capas.
     2. Ambas distinguen claramente entre servicio, interfaces y protocolos.
@@ -132,20 +133,20 @@ Ejemplo: si M = 1000, n = 5, h = 20 → 100 bytes de overhead sobre 1100 totales
     1. OSI tiene 7 capas (aplicación, presentación, sesión, transporte, red, enlace, física); TCP/IP tiene 4-5 capas (aplicación, transporte,internet, acceso a la red).
     2. TCP/IP nació de la implementación práctica y luego se teorizó. En cambio el modelo OSI fue uno teórico  creado primero y con menos adopción real.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 14 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 14 ##
     
     ** TCP: orientado  a conexión, confiable, garantiza entrega en orden, control de flujo y congestión.
     ** UDP: no orientado a conexión, envío de  datagramas sin garantía de entrega ni orden, sin control de flujo ni congestión, más rápido y liviano.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 15 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 15 ##
 
 Se necesitan 3 bombas, ya que no hay punto de articulación , entre el bloque inferior y el superior existen al menos 3 caminos vértice-disjuntos y se pueden
 identificar 3 nodos centrales cuya supresión si separa la parte inferior de la superior.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 16 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 16 ##
 
 Estrategia 1 - confirmación por paquete (ACK por cada paquete)
     * Retrasmite solo los paquetes perdidos, facilita pipelining   y reduce la latencia de recuperación.
@@ -156,8 +157,8 @@ Estrategia 2 - confirmación por archivo (ACK solo al final)
     * Si hay perdida de paquetes hay que retrasmitir paquetes potencialmente ya recibidos o reenviar todo el archivo, mayor complejidad en receptor para alamacenar todo
     hasta confirmar, mayor latencia para detectar errores y recuperar.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 17 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 17 ##
 * Resolución :  1024px x 768 px = 786.432 px
 * Bytes/px : 3 => 786.432 * 3   = 2.359.296 bytes
 * bits totales:   2.359.296 * 8 = 18.874.368 bits
@@ -171,22 +172,22 @@ e) 10 Mbps  = 10 * 1.000.000          = 10.000.000 b/s           => 18.874.368 /
 
 En orden es = d , c, b, e, a. 
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 18 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 18 ##
 
 No, en Ethernet compartida (CSMA/CD) la idea es que el medio fisico permitia detectar colisiones y se busca que solo una trasmisión "efectiva" exista en la cubierta del bus a la vez.
 802.11 es inalámbrico  y usa CSMA/CA. No detecta colisiones mientras transmite por eso emplea mecanismos de evitación para reducir las colisiones.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 19 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 19 ##
 
 DESVENTAJAS INALÁMBRICO
     1. Mayor susceptibilidad a interferencias y atenuación :las señales pueden degradarse por obstáculos, ruido magnético o interferencia de otros dispositivos,
     reduciendo la confiabilidad.
     2. Seguridad y privacidad más vulnerables: el medio es compartido y el broadcast, por lo que es más fácil escuchar o acceder.
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 20 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 20 ##
 
     ESTÁNDARES INTERNACIONALES PARA PROTOCOLOS DE RED
         ** VENTAJAS
@@ -196,31 +197,31 @@ DESVENTAJAS INALÁMBRICO
         ** DESVENTAJAS
             1. Rigidez/latencia para evolucionar: el proceso de estandarización es lento, las nuevas ideas tardan en incorporarse lo que frena la innovación rápida.
             2. Riesgo de estandarizar soluciones subóptimas: si un estandar es utilizado masivamente pero no es tecnicamente ideal, se convierte en una solución mediocre como dominante.
-                                                                 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 21 ##
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 22 ##
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 23 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 21 ##
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 24 ##
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 25 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 22 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 23 ##
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 26 ##
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 27 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 24 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 25 ##
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 28 ##
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 29 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 26 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 27 ##
 
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 30 ##
-                                                        -------------------------                                                            
-                                                            ## PROBLEMA 31 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 28 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 29 ##
+
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 30 ##
+                                                                    -------------------------                                                            
+                                                                        ## PROBLEMA 31 ##
