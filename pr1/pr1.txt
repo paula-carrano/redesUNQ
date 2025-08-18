@@ -103,5 +103,106 @@ recuperar el paquete y pasarlo a la capa de red
                                                         -------------------------                                                            
                                                             ## PROBLEMA 11 ##
 
+(a) Dividir en tramas el flujo de bits transmitidos → Capa de Enlace de Datos (2).
+(b) Determinar la ruta que se utilizará a través de la subred → Capa de Red (3).
+
                                                         -------------------------                                                            
                                                             ## PROBLEMA 12 ##
+ 
+ Cada capa agrega h bytes de encabezado.
+
+* Total de datos enviados = M+n⋅h
+* Overhead = n⋅h
+
+Fracción del ancho de banda usada en encabezados =
+
+  n . h
+----------
+M + n . h	​
+
+Ejemplo: si M = 1000, n = 5, h = 20 → 100 bytes de overhead sobre 1100 totales = 9,09%
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 13 ##
+** Similitudes:
+    1. Ambos son modelos de referencia en capas.
+    2. Ambas distinguen claramente entre servicio, interfaces y protocolos.
+
+** Diferencias:
+    1. OSI tiene 7 capas (aplicación, presentación, sesión, transporte, red, enlace, física); TCP/IP tiene 4-5 capas (aplicación, transporte,internet, acceso a la red).
+    2. TCP/IP nació de la implementación práctica y luego se teorizó. En cambio el modelo OSI fue uno teórico  creado primero y con menos adopción real.
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 14 ##
+    
+    ** TCP: orientado  a conexión, confiable, garantiza entrega en orden, control de flujo y congestión.
+    ** UDP: no orientado a conexión, envío de  datagramas sin garantía de entrega ni orden, sin control de flujo ni congestión, más rápido y liviano.
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 15 ##
+
+Se necesitan 3 bombas, ya que no hay punto de articulación , entre el bloque inferior y el superior existen al menos 3 caminos vértice-disjuntos y se pueden
+identificar 3 nodos centrales cuya supresión si separa la parte inferior de la superior.
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 16 ##
+
+Estrategia 1 - confirmación por paquete (ACK por cada paquete)
+    * Retrasmite solo los paquetes perdidos, facilita pipelining   y reduce la latencia de recuperación.
+    * hay un mayor overhead en ACKs y mayor carga de procesamiento; si el enlace tiene alta probabilidad de pérdida, los ACKs y retrasmisiones aumentan el tráfico.
+
+Estrategia 2 - confirmación por archivo (ACK solo al final)
+    * Menos overhead de control, menor tráfico de ACK.
+    * Si hay perdida de paquetes hay que retrasmitir paquetes potencialmente ya recibidos o reenviar todo el archivo, mayor complejidad en receptor para alamacenar todo
+    hasta confirmar, mayor latencia para detectar errores y recuperar.
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 17 ##
+* Resolución :  1024px x 768 px = 786.432 px
+* Bytes/px : 3 => 786.432 * 3   = 2.359.296 bytes
+* bits totales:   2.359.296 * 8 = 18.874.368 bits
+
+
+a) 56 Kpbs  = 56  * 1000              = 56.000 b/s               => 18.874.368 / 56.000             =  
+b) 100 Mbps = 100 * 1.000.000         = 100.000.000 b/s          => 18.874.368 / 100.000.000        = 
+c) 1 Gbps   = 1   * 1.000.000.000     = 1.000.000.000 b/s        => 18.874.368 / 1.000.000.000      = 
+d) 46 Tbps  = 46  * 1.000.000.000.000 = 46.000.000.000.000 b/s   => 18.874.368 / 46.000.000.000.000 = 
+e) 10 Mbps  = 10 * 1.000.000          = 10.000.000 b/s           => 18.874.368 / 10.000.000         = 
+
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 18 ##
+
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 19 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 20 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 21 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 22 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 23 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 24 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 25 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 26 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 27 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 28 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 29 ##
+
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 30 ##
+                                                        -------------------------                                                            
+                                                            ## PROBLEMA 31 ##
