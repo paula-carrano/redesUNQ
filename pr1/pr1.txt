@@ -163,22 +163,40 @@ Estrategia 2 - confirmación por archivo (ACK solo al final)
 * bits totales:   2.359.296 * 8 = 18.874.368 bits
 
 
-a) 56 Kpbs  = 56  * 1000              = 56.000 b/s               => 18.874.368 / 56.000             =  
-b) 100 Mbps = 100 * 1.000.000         = 100.000.000 b/s          => 18.874.368 / 100.000.000        = 
-c) 1 Gbps   = 1   * 1.000.000.000     = 1.000.000.000 b/s        => 18.874.368 / 1.000.000.000      = 
-d) 46 Tbps  = 46  * 1.000.000.000.000 = 46.000.000.000.000 b/s   => 18.874.368 / 46.000.000.000.000 = 
-e) 10 Mbps  = 10 * 1.000.000          = 10.000.000 b/s           => 18.874.368 / 10.000.000         = 
+a) 56 Kpbs  = 56  * 1000              = 56.000 b/s               => 18.874.368 / 56.000             =  33337,042 s   => 5.62 min
+b) 100 Mbps = 100 * 1.000.000         = 100.000.000 b/s          => 18.874.368 / 100.000.000        =  0,18874368 s  => 188.74 ms
+c) 1 Gbps   = 1   * 1.000.000.000     = 1.000.000.000 b/s        => 18.874.368 / 1.000.000.000      =  0.018874368 s => 18.87 ms
+d) 46 Tbps  = 46  * 1.000.000.000.000 = 46.000.000.000.000 b/s   => 18.874.368 / 46.000.000.000.000 =  4,103123478 s => 0.41 μs
+e) 10 Mbps  = 10 * 1.000.000          = 10.000.000 b/s           => 18.874.368 / 10.000.000         =  1.8874368 s   => 1.89 s
 
+En orden es = d , c, b, e, a. 
 
                                                         -------------------------                                                            
                                                             ## PROBLEMA 18 ##
 
+No, en Ethernet compartida (CSMA/CD) la idea es que el medio fisico permitia detectar colisiones y se busca que solo una trasmisión "efectiva" exista en la cubierta del bus a la vez.
+802.11 es inalámbrico  y usa CSMA/CA. No detecta colisiones mientras transmite por eso emplea mecanismos de evitación para reducir las colisiones.
 
                                                         -------------------------                                                            
                                                             ## PROBLEMA 19 ##
 
+DESVENTAJAS INALÁMBRICO
+    1. Mayor susceptibilidad a interferencias y atenuación :las señales pueden degradarse por obstáculos, ruido magnético o interferencia de otros dispositivos,
+    reduciendo la confiabilidad.
+    2. Seguridad y privacidad más vulnerables: el medio es compartido y el broadcast, por lo que es más fácil escuchar o acceder.
+
                                                         -------------------------                                                            
                                                             ## PROBLEMA 20 ##
+
+    ESTÁNDARES INTERNACIONALES PARA PROTOCOLOS DE RED
+        ** VENTAJAS
+            1. Interoperabilidad: dispositivos y softwares de diferentes fabricantes funcionan juntos, facilitando el despliegue y adopción global
+            2. Economías  de escala y competencia: estandarizar permite la fabricación en masa e impulsa la innovación en implementaciones compatibles.
+
+        ** DESVENTAJAS
+            1. Rigidez/latencia para evolucionar: el proceso de estandarización es lento, las nuevas ideas tardan en incorporarse lo que frena la innovación rápida.
+            2. Riesgo de estandarizar soluciones subóptimas: si un estandar es utilizado masivamente pero no es tecnicamente ideal, se convierte en una solución mediocre como dominante.
+                                                                 
                                                         -------------------------                                                            
                                                             ## PROBLEMA 21 ##
 
